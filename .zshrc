@@ -139,6 +139,7 @@ alias ll='eza --color=always --long --git --icons'
 alias lla='eza --color=always --long --git --icons -a'
 alias cd='z'
 alias tm='tmux'
+alias gdsbs='git -c delta.side-by-side=true diff'
 
 # Alias Redifinition
 alias gcm='git commit -m'
@@ -170,3 +171,5 @@ bindkey ' ' magic-space
 # Trash Output off
 alias -g NE='2>/dev/null'
 . "/home/hermes/.deno/env"
+
+export BAT_THEME="Catppuccin Mocha"
