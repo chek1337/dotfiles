@@ -129,6 +129,10 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # Alias
+alias   ...="../.."
+alias  ....="../../.."
+alias .....="../../../.."
+alias ......="../../../../.."
 alias cd='z'
 alias ls='ls --color'
 alias n='nvim'
