@@ -1,0 +1,6 @@
+# [preview]
+# max_width = 0
+# max_height = 0
+
+[mgr]
+ratio = [1, 2, 4]
