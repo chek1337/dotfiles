@@ -52,6 +52,7 @@ zstyle ':z4h:ssh-agent:' start yes
 # example. If you don't plan to use Oh My Zsh, delete this line.
 z4h install ohmyzsh/ohmyzsh || return
 z4h install conda-incubator/conda-zsh-completion
+# z4h install jeffreytse/zsh-vi-mode
 
 # Install or update core components (fzf, zsh-autosuggestions, etc.) and
 # initialize Zsh. After this point console I/O is unavailable until Zsh
@@ -77,6 +78,7 @@ z4h source ohmyzsh/ohmyzsh/lib/diagnostics.zsh  # source an individual file
 z4h load   ohmyzsh/ohmyzsh/plugins/emoji-clock  # load a plugin
 z4h load   ohmyzsh/ohmyzsh/plugins/git  # load a plugin
 z4h load   conda-incubator/conda-zsh-completion
+# z4h load jeffreytse/zsh-vi-mode
 
 
 # Define key bindings.
@@ -104,8 +106,6 @@ compdef _directories md
 # Define aliases.
 alias tree='tree -a -I .git'
 
-# Add flags to existing aliases.
-alias ls="${aliases[ls]:-ls} -A"
 
 # Set shell options: http://zsh.sourceforge.net/Doc/Release/Options.html.
 setopt glob_dots     # no special treatment for file names with a leading dot
@@ -139,8 +139,8 @@ alias n='nvim'
 alias c='clear'
 # alias cat='bat'
 alias l='eza --grid --color=always --long --no-filesize --no-time --no-user --no-permissions --icons'
-alias ll='eza --color=always --long --git --icons'
-alias lla='eza --color=always --long --git --icons -a'
+alias ls='eza --color=always --long --git --icons'
+alias lsa='eza --color=always --long --git --icons -a'
 alias cd='z'
 alias tm='tmux'
 alias gdsbs='git -c delta.side-by-side=true diff'
@@ -177,3 +177,6 @@ alias -g NE='2>/dev/null'
 . "/home/hermes/.deno/env"
 
 export BAT_THEME="Catppuccin Mocha"
+
+export PATH=$PWD/utils/:$KALDI_ROOT/tools/openfst/bin:$PWD:$PATH
+
