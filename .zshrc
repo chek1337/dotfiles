@@ -103,9 +103,6 @@ compdef _directories md
 # Define named directories: ~w <=> Windows home directory on WSL.
 [[ -z $z4h_win_home ]] || hash -d w=$z4h_win_home
 
-# Define aliases.
-alias tree='tree -a -I .git'
-
 
 # Set shell options: http://zsh.sourceforge.net/Doc/Release/Options.html.
 setopt glob_dots     # no special treatment for file names with a leading dot
@@ -134,13 +131,13 @@ alias  ....="../../.."
 alias .....="../../../.."
 alias ......="../../../../.."
 alias cd='z'
-alias ls='ls --color'
 alias n='nvim'
 alias c='clear'
 # alias cat='bat'
 alias l='eza --grid --color=always --long --no-filesize --no-time --no-user --no-permissions --icons'
 alias ls='eza --color=always --long --git --icons'
 alias lsa='eza --color=always --long --git --icons -a'
+alias tree='eza --color=always --long --git --icons --tree'
 alias cd='z'
 alias tm='tmux'
 alias gdsbs='git -c delta.side-by-side=true diff'
